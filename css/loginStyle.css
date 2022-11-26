@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: white;
+    /* height: 400px; */
+    width: 400px;
+    padding: 20px;
+    border-radius: 25px 0px ; 
+    box-shadow: 0px 0px 5px 3px rgb(221, 219, 219)
+}
+
+.text{
+    text-align: center;
+    background-image: linear-gradient(45deg, rgb(0, 68, 255), rgb(255, 51, 194), rgb(253, 0, 63));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text :nth-child(2){
+    margin-bottom: 18px;
+}
+
+.text p{
+    width: 90%;
+    -webkit-text-fill-color: black;
+    margin: auto;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.field{
+    height: 50px;
+    width: 100%;
+}
+.input input{
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    height: 35px;
+    padding-left: 15px;
+    outline: none;
+    border: 2px;
+    border-radius: 8px;
+}
+
+
+.showHideToggle{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    /* left: 325px; */
+    left: calc(100% - 35px);
+    bottom: 30px;
+}
+
+.button{
+    margin: 15px 0;
+}
+
+.button button{
+    /* background: blue;border: 3px solid red; */
+    outline: none;
+    border: 1px;
+    height: 26px;
+    width: 66px;
+    background: rgb(17, 17, 248);
+    color: white;
+    font-style: bold;
+    border-radius: 30px;
+    margin-right: 13px;
+    cursor: pointer;
+}
+
+.button a{
+    font-size: 14px;
+}
+
+.button button:hover{
+    background: rgb(0, 68, 255);
+}
+
+.rememberMe input[type=checkbox]{
+    height: 13px;
+    width: 13px;
+}
+
+.rememberMe label{
+    font-size: 18px;
+}
+
+.signupBtb{
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.errorText{
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid red;
+    border-radius: 8px 0;
+    background: #ffc8c8;
+    display: none;
+}
+
+@media screen and (max-width: 415px) {
+    .container{
+        width: calc(100% - 50px);
+        height: 100%;
+        /* border: 1px solid red; */
+    }
+    /* .showHideToggle {
+        left: calc(100% - 35px);
+    } */
+}
+@media screen and (max-width: 375px) {
+    .container{
+        width: calc(100% - 50px);
+    }
+    /* .showHideToggle {
+        left: 250px;
+    } */
+}
