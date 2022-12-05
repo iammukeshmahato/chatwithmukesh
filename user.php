@@ -40,7 +40,7 @@
                     </p>
                 </div>
             </div>
-                <a href="php/logout.php" id="logout">Log Out</a>
+                <a href="php/logout.php" id="logout" onclick="return confirm('Are you sure want to logout ?')">Log Out</a>
         </div>
 
         <div class="search">
