@@ -21,8 +21,8 @@ if (isset($_SESSION['unique_id'])) {
 
             // print_r($data);
 
-            $lastMsg = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `messages` WHERE incomming_id = '{$data['unique_id']}' AND outgoing_id = '{$_SESSION['unique_id']}' OR incomming_id = '{$_SESSION['unique_id']}' AND outgoing_id = '{$data['unique_id']}' ORDER by msg_id DESC LIMIT 1"))['msg'];
-
+            $msgRes = mysqli_query($conn, "SELECT * FROM `messages` WHERE incomming_id = '{$data['unique_id']}' AND outgoing_id = '{$_SESSION['unique_id']}' OR incomming_id = '{$_SESSION['unique_id']}' AND outgoing_id = '{$data['unique_id']}' ORDER by msg_id DESC LIMIT 1");
+            $lastMsg = mysqli_num_rows($msgRes) > 0 ? mysqli_fetch_assoc($msgRes)['msg'] : "No message";
 
             $userList .= '<a href="message.php?unique_id=' . $data['unique_id'] . '">
                                 <div class="loggedUser userList">
