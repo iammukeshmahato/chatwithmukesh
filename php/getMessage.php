@@ -27,7 +27,7 @@
             }
             echo $output;
         }else {
-            echo '<div class="noMessage">No nessage available</div>';
+            echo '<p class="noMessage">No message available</p>';
         }
     }
 

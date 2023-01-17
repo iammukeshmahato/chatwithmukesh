@@ -25,16 +25,18 @@ if (isset($_SESSION['unique_id'])) {
             $lastMsg = mysqli_num_rows($msgRes) > 0 ? mysqli_fetch_assoc($msgRes)['msg'] : "No message";
 
             $userList .= '<a href="message.php?unique_id=' . $data['unique_id'] . '">
-                                <div class="loggedUser userList">
-                                    <div>
-                                        <img src="php/uploads/' . $data['image_id'] . '">
-                                        <div class="details">
+                            <div class="loggedUser userList">
+                                 <div class="user-box" style="background-color: #ebffef8a;">
+                                      <div class="user">
+                                      <img src="php/uploads/' . $data['image_id'] .'" class= "' . $data['active_status'] . '">
+                                          <div class="details">
                                             <span>' . $data['fname'] . " " . $data['lname'] . '</span>
                                             <p class="lastMsg">' . $lastMsg . '</p>
-                                        </div>
-                                    </div>
+                                          </div>
+                                      </div>
                                     <div class="activeLog ' . $data['active_status'] . '"></div>
-                                </div>
+                                  </div>
+                            </div>
                             </a>';
             // break;
         }
