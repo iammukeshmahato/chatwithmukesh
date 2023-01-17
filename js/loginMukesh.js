@@ -1,6 +1,6 @@
-const form = document.getElementById("form");
-let pass = document.getElementById("password");
-let loginBtn = document.getElementById("btn");
+const form = document.querySelector(".login form");
+let pass = form.querySelector("#password");
+let loginBtn = form.querySelector(".button button");
 let errorText = document.querySelector(".errorText");
 // console.log(errorText);
 
@@ -20,12 +20,12 @@ loginBtn.onclick = () => {
             if (data === "loginSuccessful") {
                 location.href = "./user.php";
             }else{
-                errorText.style.opacity = "1";
+                errorText.style.display = "block";
                 errorText.textContent = data;
                 console.log(data);
                 pass.value = "";
                 setTimeout(() => {
-                    errorText.style.opacity="0";
+                    errorText.style.display = "none";
                 }, 3000);
             }
         }

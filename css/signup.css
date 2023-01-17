@@ -1,0 +1,119 @@
+#logoApp img {
+    height: 50px;
+    width: 50px;
+}
+#logoApp {
+    top: 5%;
+    height: 6%;
+}
+.child1 h1 {
+    font-size: 2rem;
+    margin-bottom: -2px;
+}
+#label {
+    font-size: 11px;
+    margin-left: -90px;
+}
+input[type="file"]{
+    height: 22px;  
+    color: rgb(139 144 148);
+}
+#label {
+    font-size: 15px;
+    color: rgb(139 144 148);
+}
+.input-file {
+    background-color: #e8f0fe;
+    display: flex;
+    height: 40px;
+    border-radius: 40px;
+    width: 100%;
+    margin: 10px 10%;
+    border: none;
+    outline: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    height: 60vh;
+}
+.errorText {
+    opacity: 0;
+    margin-bottom: -7%;
+    color: rgb(0, 0, 0);
+}
+.signup>p:nth-child(1) {
+    font-size: 2.2em;
+}
+
+
+@media (max-width:799px) {
+    #logoApp {
+        top: 5%;
+    }
+    #label {
+        margin-left: -140px;
+    }
+    .child1 h1 {
+        font-size: 2.8rem;
+    }
+    .signup>p:nth-child(1) {
+        font-size: 2.6em;
+    }
+    .signup>p:nth-child(3) {
+        font-size: 1.5rem;
+    }
+    form {
+        height: 50vh;
+    }
+    .errorText {
+        padding-bottom: 3%;
+    }
+}
+@media (max-width:477px) {
+    #logoApp {
+        top: 0;
+    }
+    #logoApp img {
+        height: 50px;
+        width: 50px;
+    }
+    .child1 h1 {
+        margin-bottom: 0;
+    }
+    .child2 {
+        margin: -10vh 0 0 0;
+        height: 32vh;
+    }
+    input {
+        height: 35px;
+    }
+    .input {
+        height: 35px;
+    }
+    form {
+        justify-content: flex-start;
+    }
+    .btn {
+        margin-top: 6px;
+    }
+    .signup>p:nth-child(1) {
+        font-size: 2.1em;
+        margin-bottom: 0px;
+    }
+    input[type="file"] {
+        height: 22px;
+    }
+    #label {
+        font-size: 12px;
+        margin-left: -136px;
+    }
+    .btn {
+        margin-top: 3px;
+    }
+    .errorText {
+        margin-top: 14%;
+        margin-bottom: -4%;
+    }
+}
