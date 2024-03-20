@@ -39,6 +39,8 @@
                 }else {
                     echo "Incorrect Email or Password";
                 }
+            }else {
+                echo "Incorrect Email or Password";
             }
         }else {
             echo "Invalid email address";
